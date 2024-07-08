@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="image3.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <div class="loader-wrapper">
+    <div class="hero">
+        <img class="loader" src="gif1.gif" alt="Loading"> 
+        <p>Loading...</p> 
+    </div>
+</div>
+
+<div class="content-wrapper">
+  
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="parallax">
+        <div class="content">
+            <h1>Aditya Gandi</h1>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Aditya Gandi</p>
+    </section>
+
+    <section id="resume">
+        <h2>Resume</h2>
+        <div class="resume-item">
+            <h3>Experience</h3>
+            <p>List Stuffs...</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Project Title</h3>
+            <p>Describe and include video...</p>
+        </div>
+        <div class="project-item">
+            <h3>Project Title</h3>
+            <p>Describe</p>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      
+      $(window).on("load", function() {
+          setTimeout(function() {
+              $(".loader-wrapper").fadeOut("slow");
+              $(".content-wrapper").fadeIn("slow"); 
+              $("body").css("overflow", "auto"); 
+          }, 2900);
+      });
+  </script>
+    <script src="scripts.js"></script>
+  </div>
+
   
 </body>
 </html>
